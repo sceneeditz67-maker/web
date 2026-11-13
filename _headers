@@ -1,0 +1,10 @@
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/admin.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/api/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store

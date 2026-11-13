@@ -1,0 +1,33 @@
+Creaciones Romero · versión para publicar gratis en Cloudflare Pages
+
+QUÉ ES ESTA CARPETA
+Es tu web pública: inicio, decoración, alquiler, nosotros, galería y contacto, con tus 10 fotos,
+música, animaciones, WhatsApp, TikTok y el chatbot. Funciona igual que la de Netlify, sin pagar por
+publicar ni por visitas.
+
+DIFERENCIA CON LA VERSIÓN DE NETLIFY
+Aquí no está el panel /admin porque Cloudflare Pages no guarda datos. Si abres /admin te lleva al
+inicio. Las solicitudes de los clientes se siguen enviando completas por WhatsApp.
+
+CÓMO PUBLICAR (5 minutos)
+1. Entra a https://dash.cloudflare.com/sign-up y crea una cuenta gratis (sin tarjeta).
+2. En el menú: Workers & Pages → Create → Pages → Upload assets.
+3. Nombre del proyecto: creacionesromero
+4. Sube TODOS los archivos de esta carpeta. index.html debe quedar en la raíz.
+5. Cloudflare te dará una dirección parecida a creacionesromero.pages.dev. Esa es tu web.
+
+CÓMO ACTUALIZARLA DESPUÉS
+Entra al proyecto → Create new deployment → sube esta carpeta otra vez. No cuesta nada y no tiene
+límite práctico (500 publicaciones al mes en el plan gratuito).
+
+QUÉ SE MANTIENE
+- Tus 10 fotos originales y toda la decoración visual
+- Música instrumental al 100 %, sin botones, y sin cortarse al cambiar de sección
+- Animaciones, calendario de fechas y formularios que abren WhatsApp con todos los campos
+- WhatsApp +591 61399401 y TikTok @ly.de.romero
+- Chatbot de Elfsight a la derecha y WhatsApp a la izquierda
+- La marca Creaciones Romero intacta
+
+SI QUIERES TAMBIÉN EL PANEL /admin EN CLOUDFLARE
+Hace falta un lugar donde guardar las solicitudes. Se puede conectar Supabase (gratis). Pídelo y se
+prepara; mientras tanto, la versión de Netlify conserva el panel funcionando.

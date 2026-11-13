@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dónde publicar sin créditos · Creaciones Romero</title>
+<style>
+:root{--ink:#303d32;--violet:#7139d2;--pink:#f24d9f;--yellow:#ffe66a;--cream:#faf9f3}
+*{box-sizing:border-box}body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;font-size:15px}
+header{background:#fff;border-bottom:2px solid var(--ink);padding:16px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+header i{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--yellow);border:1.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);font-style:normal;font-size:19px;color:var(--pink)}
+header b{font-family:Georgia,serif;font-size:20px;letter-spacing:-.5px}
+.tag{display:inline-block;background:#e9ddff;border:1px solid #c9aef0;color:#4b2585;border-radius:20px;padding:4px 12px;font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+main{max-width:860px;margin:0 auto;padding:28px 20px 80px}
+h1{font-family:Georgia,serif;font-size:31px;letter-spacing:-1px;margin:6px 0 10px}
+h2{font-family:Georgia,serif;font-size:22px;margin:30px 0 10px}
+p.lead{color:#6f657c;margin:0 0 20px}
+.card{background:#fff;border:2px solid var(--ink);border-radius:16px;box-shadow:5px 5px 0 #d9c6f7;padding:22px;margin:18px 0}
+.card.highlight{background:#fff8d9;box-shadow:5px 5px 0 #f0cf5f}
+.card.warn{background:#ffe9f2;box-shadow:5px 5px 0 #ffc9e0;border-color:#b9176b}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+th,td{border-bottom:1px solid #e6dcf3;padding:9px 8px;text-align:left;vertical-align:top}
+th{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:#6f657c}
+code{background:#f3ecff;border:1px solid #ddccf3;border-radius:5px;padding:1px 5px;font-size:13px}
+ul,ol{padding-left:22px}li{margin:6px 0}
+.step{display:flex;gap:14px;margin:16px 0}
+.step b{flex:0 0 30px;height:30px;display:grid;place-items:center;background:var(--violet);color:#fff;border-radius:9px;border:1.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink);font-size:14px}
+.small{font-size:12.5px;color:#6f657c}
+a{color:#5b28b5}
+@media(max-width:600px){h1{font-size:26px}table{font-size:12.5px}}
+</style></head>
+<body>
+<header><i>✿</i><b>Creaciones Romero</b> <span class="tag">Guía de publicación</span></header>
+<main>
+<h1>Publicar sin gastar créditos</h1>
+<p class="lead">Netlify te cobra 15 créditos por cada publicación y 20 por cada GB de visitas. Te quedan 439. Cloudflare Pages no cobra las publicaciones ni las visitas de este tipo de web.</p>
+
+<div class="card highlight"><strong>Tu caso:</strong> la web pesa unos 2,5 MB. En Netlify, 439 créditos alcanzan para unas 29 publicaciones o unos 21 GB de visitas. En Cloudflare Pages puedes republicar y recibir visitas sin pagar.</div>
+
+<h2>Comparación</h2>
+<table>
+<tr><th>Servicio</th><th>Volver a publicar</th><th>Visitas</th><th>Panel /admin</th></tr>
+<tr><td><strong>Cloudflare Pages</strong></td><td>Gratis (hasta 500 al mes)</td><td>Gratis y sin límite</td><td>Necesita un servicio extra para guardar datos</td></tr>
+<tr><td>Netlify (el que usas hoy)</td><td>15 créditos cada vez</td><td>20 créditos por GB</td><td>Ya funciona</td></tr>
+<tr><td>GitHub Pages</td><td>Gratis</td><td>100 GB al mes</td><td>No puede guardar datos</td></tr>
+</table>
+
+<div class="card warn"><strong>Sobre el panel /admin:</strong> el panel necesita dónde guardar las solicitudes. Cloudflare Pages sirve archivos, no bases de datos. Si publicas solo en Cloudflare, la web funciona entera (decoración, galería, alquiler, contacto, WhatsApp, chatbot, música), pero el panel no tendría almacenamiento.
+<ul>
+<li><strong>Solución simple:</strong> la web en Cloudflare y el panel no se usa; las solicitudes siguen llegando por WhatsApp.</li>
+<li><strong>Solución completa:</strong> Cloudflare + Supabase (guarda los datos gratis). Son dos ajustes de código que puedo hacer si lo pides.</li>
+</ul></div>
+
+<h2>Opción A · Cloudflare Pages paso a paso</h2>
+<div class="step"><b>1</b><div>Crea una cuenta gratis en <a href="https://dash.cloudflare.com/sign-up" target="_blank" rel="noopener">dash.cloudflare.com</a>. No pide tarjeta.</div></div>
+<div class="step"><b>2</b><div>Ve a <strong>Workers &amp; Pages → Create → Pages → Upload assets</strong> y ponle el nombre <code>creacionesromero</code>.</div></div>
+<div class="step"><b>3</b><div>Sube los archivos de la carpeta <code>sitio-web</code> del ZIP: <code>index.html</code>, <code>assets</code>, <code>festive.css</code>, etc. El archivo <code>index.html</code> debe quedar en la raíz, no dentro de otra carpeta.</div></div>
+<div class="step"><b>4</b><div>Cloudflare te da una dirección <code>creacionesromero.pages.dev</code>. Tu web queda en línea al instante.</div></div>
+<div class="step"><b>5</b><div>Para actualizarla: entra al proyecto → <strong>Create new deployment</strong> → sube la carpeta otra vez. Gratis, sin créditos.</div></div>
+<p class="small">También puedes usar Netlify como respaldo y migrar solo cuando Netlify se quede sin créditos.</p>
+
+<h2>Opción B · Quedarte en Netlify cuidando créditos</h2>
+<ul>
+<li>Junta varios cambios y publica una sola vez: 15 créditos por publicación.</li>
+<li>Para probar cambios usa <strong>Deploy Preview</strong>: no gasta créditos.</li>
+<li>Las visitas gastan 20 créditos por GB: tus 439 créditos son unos 21 GB, es decir miles de visitas.</li>
+<li>El panel /admin ya funciona sin contraseña; si lo usas, quédate aquí.</li>
+</ul>
+
+<h2>¿Por qué no GitHub Pages?</h2>
+<p>Es gratis y permite republicar sin costo, pero no puede guardar las solicitudes y está pensado para proyectos de código. Cloudflare es más directo para tu caso.</p>
+
+<h2>Mi recomendación</h2>
+<ul>
+<li><strong>Si no usas el panel:</strong> publica en Cloudflare Pages y deja Netlify como respaldo. Publicar y recibir visitas te saldrá gratis.</li>
+<li><strong>Si quieres guardar solicitudes:</strong> quédate en Netlify con los 439 créditos, que alcanzan para unas 29 publicaciones y miles de visitas.</li>
+</ul>
+<p class="small">Datos de los planes gratuitos consultados en noviembre de 2026 en las páginas de Cloudflare, Netlify y Supabase. Los planes pueden cambiar: confirma en la web oficial antes de migrar.</p>
+</main>
+</body></html>
